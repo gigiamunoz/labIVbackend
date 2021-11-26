@@ -1,0 +1,16 @@
+{
+  "name": "prueba",
+  "version": "1.0.0",
+  "description": "prueba de mqtt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lina",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "mqtt": "^4.2.8"
+  }
+}
