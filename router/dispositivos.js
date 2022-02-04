@@ -1,3 +1,5 @@
+//Este archvo no sirve para nada porque no se hizo rel routing
+
 const express  = require ('express');
 const req = require("express/lib/request");
 const routes = express.Router();

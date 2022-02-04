@@ -4,7 +4,8 @@ const { Schema } = mongoose;
 const dispositivoSchema = new Schema({
   nombre:  String,
   variable: String,
-  location:   String,
+  latitud:   String,
+  longitud: String,
   date: { type: Date, default: Date.now },
 });
 

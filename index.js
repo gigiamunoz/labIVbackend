@@ -27,8 +27,9 @@ function EventoMensaje(topic, message) {
   var datos = message.toString().split('/');
   date=datos[0];
   variable=datos[1];
-  location=datos[2];
-  console.log(date +"*" +variable+"*" +location )
+  lati=datos[2];
+  long=datos[3];
+  // console.log(date +"-" +variable+"-" +lati+"-" +long )
   var nombre = "Dispositivo no encontrado";
   if(topic=="LAB4Unicauca/Arduino"){
       nombre = "Arduino";
@@ -45,15 +46,17 @@ function EventoMensaje(topic, message) {
     if(topic=="LAB4Unicauca/Beagle"){
       nombre = "Beagle";
     }
-
+    
         //  POST PARA CREAR USUARIO EN MONGO
       mgs.model("Dispositivo").create({
           "nombre":  nombre,
           "variable": variable ,
-          "location": location,
+          "latitud": lati,
+          "longitud": long,
           "date": date,
       }, (err,dispositivo)=>{
           console.log(dispositivo);
+          console.log("Estoy entrando aqui")
       })
 
   //   client.end()
